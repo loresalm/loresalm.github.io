@@ -64,7 +64,7 @@ function setup() {
   			spr0padList.push(spr);
   			xpad+=100.7;
 	}
-  padsound = loadSound('audio/missile.wav');
+  padsound = loadSound('audio/test.mp3');
 	//setting reset button in 0
 	r0=createSprite(20,20,10, 10);
 	r0.shapeColor = color(255,0,0);

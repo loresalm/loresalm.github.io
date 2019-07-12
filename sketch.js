@@ -6,6 +6,7 @@ var backList=[];
 var r0;
 var reset0=0;
 var img0bullet;
+let padsound;
 
 let numSegments = 10,
   x = [],
@@ -63,6 +64,7 @@ function setup() {
   			spr0padList.push(spr);
   			xpad+=100.7;
 	}
+  padsound = loadSound('audio/missile.wav');
 	//setting reset button in 0
 	r0=createSprite(20,20,10, 10);
 	r0.shapeColor = color(255,0,0);
@@ -151,8 +153,10 @@ function draw() {
     		if(spr0List[i].overlap(spr0padList[j])){
     			console.log(j);
     			spr0padList[j].scale = 0.95;
+          padsound.play();
     		}else{
     			spr0padList[j].scale = 1;
+          padsound.stop();
     		}
     	}
     }	

@@ -156,7 +156,7 @@ function draw() {
           padsound.play();
     		}else{
     			spr0padList[j].scale = 1;
-          padsound.stop();
+          
     		}
     	}
     }	

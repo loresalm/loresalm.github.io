@@ -26,7 +26,7 @@ for (let i = 0; i < numSegments; i++) {
 
 
 function preload() {
-  img0bullet = loadImage('bullet.png');
+  img0bullet = loadImage('img/bullet.png');
 }
 
 

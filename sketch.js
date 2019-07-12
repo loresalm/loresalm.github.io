@@ -5,6 +5,7 @@ var spr4activList;
 var backList=[];
 var r0;
 var reset0=0;
+var img0bullet;
 
 let numSegments = 10,
   x = [],
@@ -21,6 +22,11 @@ for (let i = 0; i < numSegments; i++) {
   x[i] = 0;
   y[i] = 0;
   angle[i] = 0;
+}
+
+
+function preload() {
+  img0bullet = loadImage('bullet.png');
 }
 
 
@@ -109,8 +115,8 @@ function mousePressed() {
 		}
 	}else if (backList[0].mouseIsOver) {
 		console.log("bloc zero");
-		spr = createSprite(width/2, height/2,
-    	10,10);
+		spr = createSprite(width/2, height/2,10,10);
+		spr.addImage(img0bullet);
   		spr.shapeColor = color(0);
   		spr.velocity.y = 0;
   		spr.position.x = mouseX;

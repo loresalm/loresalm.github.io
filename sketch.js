@@ -8,6 +8,20 @@ var reset0=0;
 var img0bullet;
 let padsound;
 
+// -quandrante numero 3-
+var line1;
+var button1; 
+var notify1;
+
+var line2;
+var button2; 
+var notify2;
+
+var line3;
+var button3; 
+var notify3;
+//___________________________________________________________
+
 let numSegments = 10,
   x = [],
   y = [],
@@ -107,6 +121,54 @@ function setup() {
   	} 
 
 
+    // -quandrante numero 3-
+
+  var x_pos= 205;
+  var y_pos  = 370;
+
+  line1 = createSprite(x_pos,y_pos,
+        300, 40);
+    line1.shapeColor = color(50, 0, 20);
+    button1 = createSprite(x_pos,y_pos,
+        20, 40);
+    button1.shapeColor = color(0, 0, 255);
+    line1.onMouseOver = function(){
+      notify1= 1;
+    }
+    line1.onMouseOut = function(){
+      notify1= 0;
+    }
+
+    line2 = createSprite(x_pos,y_pos+100,
+        300, 40);
+    line2.shapeColor = color(50, 0, 20);
+    button2 = createSprite(x_pos,y_pos+100,
+        20, 40);
+    button2.shapeColor = color(0, 0, 255);
+    line2.onMouseOver = function(){
+      notify2= 1;
+    }
+    line2.onMouseOut = function(){
+      notify2= 0;
+    }
+
+    line3 = createSprite(x_pos,y_pos+200,
+        300, 40);
+    line3.shapeColor = color(50, 0, 20);
+    button3 = createSprite(x_pos,y_pos+200,
+        20, 40);
+    button3.shapeColor = color(0, 0, 255);
+    line3.onMouseOver = function(){
+      notify3= 1;
+    }
+    line3.onMouseOut = function(){
+      notify3= 0;
+    }
+  
+
+  //___________________________________________________________
+
+
  }
 
 
@@ -179,6 +241,30 @@ function draw() {
   for (let k = 0; k < x.length; k++) {
     segment(x[k], y[k], angle[k], (k + 1) * 2);
   }
+
+    // -quandrante numero 3-
+
+  if (notify1 == 1){
+    button1.velocity.x= (mouseX-button1.position.x)*0.2;
+  } else {
+    button1.velocity.x= 0;
+  }
+
+  if (notify2 == 1){
+    button2.velocity.x= (mouseX-button2.position.x)*0.2;
+  } else {
+    button2.velocity.x= 0;
+  }
+
+  if (notify3 == 1){
+    button3.velocity.x= (mouseX-button3.position.x)*0.2;
+  } else {
+    button3.velocity.x= 0;
+  }
+
+
+  //___________________________________________________________
+
  
 
 }

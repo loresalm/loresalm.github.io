@@ -42,7 +42,7 @@ for (let i = 0; i < numSegments; i++) {
 
 function preload() {
   img0bullet = loadImage('img/bullet.png');
-  padsound = loadSound('audio/test.mp3');
+  padsound = loadSound('audio/missile.wav');
 }
 
 

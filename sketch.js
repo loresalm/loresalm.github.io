@@ -5,6 +5,8 @@ var synth = new Tone.Synth().toMaster()
 synth.triggerAttackRelease('C4', '8n')
 console.log('this is a test')
 
+/*
+
 //----------------------------------------
 
 var spr0List=[];
@@ -302,7 +304,7 @@ function segment(x, y, a, sw) {
 }
 
 
-
+*/
 
 
 

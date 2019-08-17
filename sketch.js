@@ -1,4 +1,4 @@
-var synth = new Tone.Synth().toMaster()
+var synth = new Tone.Synth().toMaster();
 
 
 //----------------------------------------
@@ -209,7 +209,7 @@ function mousePressed() {
 }
 
 
-synth.triggerAttackRelease('C4', '8n')
+synth.triggerAttackRelease('C4', '8n');
 
 function draw() {
   background(50); 

@@ -1,4 +1,5 @@
-let synth;
+var synth = new Tone.Synth().toMaster()
+synth.triggerAttackRelease('C4', '8n')
 
 //----------------------------------------
 
@@ -51,7 +52,7 @@ function preload() {
 
 
 function setup() {
-  synth = new Tone.AMSynth().toMaster()
+
 	createCanvas(1240, 630);
 	var yback=160
 	for (var lin = 1; lin<=2; lin++) {

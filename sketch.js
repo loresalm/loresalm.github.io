@@ -1,3 +1,9 @@
+//synt 
+
+var synth = new Tone.Synth().toMaster()
+
+//----------------------------------------
+
 var spr0List=[];
 var spr0padList=[];
 var spr4List=[];
@@ -216,7 +222,7 @@ function draw() {
     		if(spr0List[i].overlap(spr0padList[j])){
     			console.log(j);
     			spr0padList[j].scale = 0.95;
-          padsound.play();
+          synth.triggerAttackRelease('C4', '8n');
     		}else{
     			spr0padList[j].scale = 1;
           

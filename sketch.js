@@ -1,13 +1,4 @@
-const synth = new Tone.AMSynth().toMaster()
 
-//attach a listener to the keyboard events
-document.querySelector('tone-keyboard').addEventListener('noteon', e => {
-  synth.triggerAttack(e.detail.name)
-})
-
-document.querySelector('tone-keyboard').addEventListener('noteoff', e => {
-  synth.triggerRelease()
-})
 
 //----------------------------------------
 

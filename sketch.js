@@ -211,7 +211,7 @@ function mousePressed() {
 
 function draw() {
   background(50); 
-  padsound.play();
+  
 
 
   drawSprites();

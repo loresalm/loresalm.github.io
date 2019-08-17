@@ -13,7 +13,7 @@ var r0;
 var reset0=0;
 var img0bullet;
 let padsound;
-
+// test
 // -quandrante numero 3-
 var line1;
 var button1; 

@@ -48,6 +48,7 @@ for (let i = 0; i < numSegments; i++) {
 function preload() {
   img0bullet = loadImage('img/bullet.png');
   var synth = new Tone.Synth().toMaster();
+  synth.triggerAttackRelease('C4', '8n');
 }
 
 

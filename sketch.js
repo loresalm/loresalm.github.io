@@ -1,7 +1,12 @@
 
 
-var MonoSynth = require("Tone").MonoSynth;
-var synth = new MonoSynth();
+var synth = new require("Tone").Synth().toMaster();
+
+//play a middle 'C' for the duration of an 8th note
+synth.triggerAttackRelease("C4", "8n");
+
+//var MonoSynth = require("Tone").MonoSynth;
+//var synth = new MonoSynth();
 
 
 

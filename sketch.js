@@ -1,5 +1,7 @@
 
-var synth = new Tone.Synth().toMaster();
+
+var MonoSynth = require("Tone").MonoSynth;
+var synth = new MonoSynth();
 synth.triggerAttackRelease('C4', '8n');
 
 

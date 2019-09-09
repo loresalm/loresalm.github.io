@@ -2,7 +2,7 @@
 
 var MonoSynth = require("Tone").MonoSynth;
 var synth = new MonoSynth();
-synth.triggerAttackRelease('C4', '8n');
+
 
 
 //----------------------------------------
@@ -218,7 +218,7 @@ synth.triggerAttackRelease('C4', '8n');
 
 function draw() {
   background(50); 
-  
+  synth.triggerAttackRelease('C4', '8n');
 
 
   drawSprites();

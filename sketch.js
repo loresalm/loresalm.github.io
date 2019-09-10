@@ -217,6 +217,12 @@ function mousePressed() {
 }
 
 
+function play_sound()
+{
+  synth.triggerAttackRelease("C4", "8n");
+}
+
+
 
 
 function draw() {
@@ -229,7 +235,9 @@ function draw() {
     	spr0List[i].position.y = 300;
     	for (var j = 0; j < spr0padList.length; j++){
     		if(spr0List[i].overlap(spr0padList[j])){
-          synth.triggerAttackRelease("C4", "8n");
+
+          play_sound()
+
     			console.log(j);
     			spr0padList[j].scale = 0.95;
           

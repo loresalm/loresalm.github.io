@@ -62,7 +62,7 @@ function preload() {
 
 
 function setup() {
-  var synth = new require("Tone").Synth().toMaster();
+  let synth = new Tone.Synth().toMaster();
 
 	createCanvas(1240, 630);
 	var yback=160

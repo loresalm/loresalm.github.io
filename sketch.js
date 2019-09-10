@@ -184,6 +184,12 @@ function setup() {
 
  }
 
+ 
+function play_sound()
+{
+  synth.triggerAttackRelease("C4", "8n");
+}
+
 
 function mousePressed() {
 
@@ -218,10 +224,6 @@ function mousePressed() {
 }
 
 
-function play_sound()
-{
-  synth.triggerAttackRelease("C4", "8n");
-}
 
 
 

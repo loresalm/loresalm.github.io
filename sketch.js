@@ -8,7 +8,7 @@
 //var MonoSynth = require("Tone").MonoSynth;
 //var synth = new MonoSynth();
 
-
+let synth;
 
 //----------------------------------------
 
@@ -62,7 +62,7 @@ function preload() {
 
 
 function setup() {
-  let synth = new Tone.Synth().toMaster();
+  synth = new Tone.Synth().toMaster();
 
 	createCanvas(1240, 630);
 	var yback=160

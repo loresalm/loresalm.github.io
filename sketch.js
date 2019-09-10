@@ -190,6 +190,7 @@ function mousePressed() {
 	if (reset0==1) {
 		for (var i = 0; i < spr0List.length; i++) {
 			spr0List[i].remove();
+      play_sound();
 		}
 	}else if (backList[0].mouseIsOver) {
     
@@ -229,7 +230,7 @@ function draw() {
   background(50); 
 
   drawSprites();
-  
+
   for (var i = 0; i < spr0List.length; i++) {
     if (spr0List[i].position.y > 300) {
     	spr0List[i].velocity.y *= -1;

@@ -1,9 +1,9 @@
 
 
-var synth = new require("Tone").Synth().toMaster();
+
 
 //play a middle 'C' for the duration of an 8th note
-synth.triggerAttackRelease("C4", "8n");
+
 
 //var MonoSynth = require("Tone").MonoSynth;
 //var synth = new MonoSynth();
@@ -62,6 +62,7 @@ function preload() {
 
 
 function setup() {
+  var synth = new require("Tone").Synth().toMaster();
 
 	createCanvas(1240, 630);
 	var yback=160
@@ -195,6 +196,7 @@ function mousePressed() {
 			spr0List[i].remove();
 		}
 	}else if (backList[0].mouseIsOver) {
+    synth.triggerAttackRelease("C4", "8n");
 		console.log("bloc zero");
 		spr = createSprite(width/2, height/2,10,10);
 		spr.addImage(img0bullet);

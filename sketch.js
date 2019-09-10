@@ -185,19 +185,14 @@ function setup() {
  }
 
 
-function play_sound()
-{
-  synth.triggerAttackRelease("C4", "8n");
-}
-
-
 function mousePressed() {
 
 	if (reset0==1) {
 		for (var i = 0; i < spr0List.length; i++) {
 			spr0List[i].remove();
      }
-      play_sound();
+    synth.triggerAttackRelease("C4", "8n");
+
 	}else if (backList[0].mouseIsOver) {
     
 		console.log("bloc zero");
@@ -239,8 +234,6 @@ function draw() {
     	spr0List[i].position.y = 300;
     	for (var j = 0; j < spr0padList.length; j++){
     		if(spr0List[i].overlap(spr0padList[j])){
-
-          play_sound();
 
     			console.log(j);
     			spr0padList[j].scale = 0.95;

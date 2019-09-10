@@ -229,6 +229,7 @@ function draw() {
   background(50); 
 
   drawSprites();
+  
   for (var i = 0; i < spr0List.length; i++) {
     if (spr0List[i].position.y > 300) {
     	spr0List[i].velocity.y *= -1;
@@ -236,7 +237,7 @@ function draw() {
     	for (var j = 0; j < spr0padList.length; j++){
     		if(spr0List[i].overlap(spr0padList[j])){
 
-          play_sound()
+          play_sound();
 
     			console.log(j);
     			spr0padList[j].scale = 0.95;

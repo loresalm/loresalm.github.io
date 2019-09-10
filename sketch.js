@@ -192,7 +192,7 @@ function mousePressed() {
 			spr0List[i].remove();
 		}
 	}else if (backList[0].mouseIsOver) {
-    synth.triggerAttackRelease("C4", "8n");
+    
 		console.log("bloc zero");
 		spr = createSprite(width/2, height/2,10,10);
 		spr.addImage(img0bullet);
@@ -229,6 +229,7 @@ function draw() {
     	spr0List[i].position.y = 300;
     	for (var j = 0; j < spr0padList.length; j++){
     		if(spr0List[i].overlap(spr0padList[j])){
+          synth.triggerAttackRelease("C4", "8n");
     			console.log(j);
     			spr0padList[j].scale = 0.95;
           

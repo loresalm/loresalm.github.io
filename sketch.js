@@ -94,7 +94,7 @@ function setup() {
 	}
 
 	//setting reset button in 0
-	r0=createSprite(20,20,10, 10);
+	r0=createSprite(50,50,30, 30);
 	r0.shapeColor = color(255,0,0);
 	r0.onMouseOver = function() {
 		reset0=1;

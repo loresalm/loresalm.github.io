@@ -4,10 +4,6 @@
 
 //play a middle 'C' for the duration of an 8th note
 
-
-//var MonoSynth = require("Tone").MonoSynth;
-//var synth = new MonoSynth();
-
 let synth;
 
 //----------------------------------------
@@ -56,8 +52,8 @@ for (let i = 0; i < numSegments; i++) {
 
 function preload() {
   img0bullet = loadImage('img/bullet.png');
-  var synth = new Tone.Synth().toMaster();
-  synth.triggerAttackRelease('C4', '8n');
+  
+  
 }
 
 
@@ -221,12 +217,10 @@ function mousePressed() {
 }
 
 
-synth.triggerAttackRelease('C4', '8n');
+
 
 function draw() {
   background(50); 
-  synth.triggerAttackRelease('C4', '8n');
-
 
   drawSprites();
   for (var i = 0; i < spr0List.length; i++) {
@@ -237,7 +231,7 @@ function draw() {
     		if(spr0List[i].overlap(spr0padList[j])){
     			console.log(j);
     			spr0padList[j].scale = 0.95;
-          synth.triggerAttackRelease('C4', '8n');
+          
     		}else{
     			spr0padList[j].scale = 1;
           

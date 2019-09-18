@@ -4,7 +4,7 @@ let bassSynth
 
 function preload(){
 
-	bassSynth = new Tone.MembraneSynth().toMaster()
+	bassSynth = new Tone.Synth().toMaster()
 
 	loopBeat = new Tone.Loop(song, '4n')
 
@@ -19,5 +19,5 @@ function setup() {
 
 function song(time){
 	console.log(time)
-	bassSynth.triggerAttackRelease('c1', '8n', time)
+	bassSynth..triggerAttackRelease('C4', '8n', time)
 }

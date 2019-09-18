@@ -1,8 +1,17 @@
 
-var loop = new Tone.Loop(function(time){
-	//triggered every eighth note.
+let loopBeat;
+let bassSynth;
 
-	console.log(time);
-	
-}, "8n").start(0);
-Tone.Transport.start();
+function setup() {
+
+	bassSynth = new Tone.MembraneSynth().toMaster();
+
+	loopBeat = new Tone.Loop(song, '4n');
+	Tone.Transport.start();
+	loopBeat.start(0);
+}
+
+function song(time){
+	console.log(time)
+	bassSynth.triggerAttackRelease('c1', '8n', time)
+}

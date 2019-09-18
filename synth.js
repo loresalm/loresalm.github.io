@@ -1,14 +1,20 @@
 
-let loopBeat;
-let bassSynth;
+let loopBeat
+let bassSynth
+
+function preload(){
+
+	bassSynth = new Tone.MembraneSynth().toMaster()
+
+	loopBeat = new Tone.Loop(song, '4n')
+
+}
 
 function setup() {
 
-	bassSynth = new Tone.MembraneSynth().toMaster();
 
-	loopBeat = new Tone.Loop(song, '4n');
-	Tone.Transport.start();
-	loopBeat.start(0);
+	Tone.Transport.start()
+	loopBeat.start(0)
 }
 
 function song(time){

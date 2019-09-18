@@ -19,5 +19,5 @@ function setup() {
 
 function song(time){
 	console.log(time)
-	bassSynth..triggerAttackRelease('C4', '8n', time)
+	bassSynth.triggerAttackRelease('C4', '8n', time)
 }

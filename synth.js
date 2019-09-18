@@ -1,5 +1,8 @@
 
+var loop = new Tone.Loop(function(time){
+	//triggered every eighth note.
 
-var synth = new Tone.Synth().toMaster()
-
-synth.triggerAttackRelease('C4', '8n')
+	console.log(time);
+	
+}, "8n").start(0);
+Tone.Transport.start();

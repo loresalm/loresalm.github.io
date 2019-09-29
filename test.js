@@ -29,6 +29,8 @@ function setup() {
 
 function song(time) {
 
+	console.log(time)
+
 	env.triggerAttackRelease(0,3);
 
 }
